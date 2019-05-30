@@ -9,7 +9,7 @@ library(beautier)
 root_folder <- path.expand("~/GitHubs/pirouette_article")
 example_no <- 1
 example_folder <- file.path(root_folder, paste0("example_", example_no))
-dir.create(example_folder, showWarnings = FALSE)
+dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
 set.seed(314)
 testit::assert(is_beast2_installed())
