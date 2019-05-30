@@ -18,13 +18,14 @@ r_github_packages:
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
-  #- richelbilderbeek/PBD/PBD # Bleeding-edge version
   - richelbilderbeek/pirouette@richel
   - richelbilderbeek/raket@develop
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling
-  # - xl0418/dododo
+
+bioc_packages:
+  - ggtree
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
