@@ -6,7 +6,6 @@ suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
 library(beautier)
 
-#root_folder <- path.expand("~/GitHubs/pirouette_article")
 root_folder <- getwd()
 example_no <- 1
 example_folder <- file.path(root_folder, paste0("example_", example_no))
