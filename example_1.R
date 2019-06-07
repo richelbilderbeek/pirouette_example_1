@@ -7,7 +7,7 @@ suppressMessages(library(ggtree))
 library(beautier)
 
 #root_folder <- path.expand("~/GitHubs/pirouette_article")
-#example_no <- 1
+example_no <- 1
 #example_folder <- file.path(root_folder, paste0("example_", example_no))
 example_folder <- getwd()
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
