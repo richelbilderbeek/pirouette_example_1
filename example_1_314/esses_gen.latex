@@ -1,5 +1,5 @@
 % latex table generated in R 3.6.0 by xtable 1.8-4 package
-% Thu Jun 13 08:27:15 2019
+% Tue Jun 18 11:00:30 2019
 \begin{table}[ht]
 \centering
 \begin{tabular}{ll}
@@ -15,6 +15,5 @@ posterior & 9952 \\
   birthRate & 10001 \\ 
    \hline
 \end{tabular}
-\caption{ESSes of example 1} 
-\label{tab:esses_example_1}
+\caption{ESSes for generative model} 
 \end{table}
