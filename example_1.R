@@ -69,9 +69,6 @@ pir_params <- create_pir_params(
   experiments = experiments
 )
 
-################################################################################
-# Settings to run on Peregrine cluster
-################################################################################
 pir_params$alignment_params$fasta_filename <- file.path(example_folder, "true.fasta")
 for (i in seq_along(pir_params$experiments)) {
   pir_params$experiments[[i]]$beast2_options$input_filename <- file.path(example_folder, "beast2_input.xml")
@@ -89,21 +86,11 @@ if (!is_one_na(pir_params$twinning_params)) {
   pir_params$twinning_params$twin_evidence_filename <- file.path(example_folder, "evidence_twin.csv")
 }
 rm_pir_param_files(pir_params)
-################################################################################
 
 errors <- pir_run(
   phylogeny,
   pir_params = pir_params
 )
-
-if (1 == 2) {
-  errors <- utils::read.csv(
-    file = file.path(example_folder, "errors.csv")
-  )
-  check_pir_out(errors)
-
-  pir_plot(errors)
-}
 
 utils::write.csv(
   x = errors,
@@ -112,7 +99,7 @@ utils::write.csv(
 )
 
 pir_plot(errors) +
-  ggsave(file.path(example_folder, "errors.png"))
+  ggsave(file.path(example_folder, "errors.png"), width = 7, height = 7)
 
 pir_to_pics(
   phylogeny = phylogeny,

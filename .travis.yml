@@ -58,4 +58,4 @@ script:
   - ./scripts/check_dead_links
 
 after_success:
-  - cd ~/GitHubs/pirouette_article; find .
+  - cd example_1_314 ; find .
