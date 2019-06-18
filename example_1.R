@@ -28,8 +28,7 @@ if (length(args) > 1) {
   )
 }
 
-
-library(pirouette)
+suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
 library(beautier)
