@@ -50,6 +50,7 @@ before_script:
   - Rscript -e "mauricer::install_beast2_pkg(\"NS\")"
 
 script:
+  - Rscript -e 'peregrine::get_pff_tempfile()'
   # Delete all previous results
   - rm -rf example_1_314
   # Go!
