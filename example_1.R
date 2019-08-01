@@ -33,6 +33,10 @@ suppressMessages(library(ggplot2))
 suppressMessages(library(ggtree))
 library(beautier)
 
+if (1 == 2) {
+  setwd("~/GitHubs/pirouette_example_1")
+}
+
 root_folder <- getwd()
 example_no <- 1
 example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
@@ -71,6 +75,8 @@ pir_params <- create_pir_params(
 # Make Peregrine friendly
 pir_params <- peregrine::to_pff_pir_params(pir_params)
 rm_pir_param_files(pir_params)
+
+pir_params$verbose <- TRUE
 
 errors <- pir_run(
   phylogeny,
