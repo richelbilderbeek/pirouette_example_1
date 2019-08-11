@@ -30,7 +30,6 @@ if (length(args) > 1) {
 
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
-suppressMessages(library(ggtree))
 library(beautier)
 
 if (1 == 2) {
