@@ -15,10 +15,10 @@ r_github_packages:
   - jimhester/covr
   - jimhester/lintr
   - ropensci/beautier@develop
-  - ropensci/beastier
+  - ropensci/beastier@develop
   - ropensci/mauricer
-  - ropensci/babette
-  - richelbilderbeek/mcbette
+  - ropensci/babette@develop
+  - richelbilderbeek/mcbette@develop
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - thijsjanzen/nodeSub
