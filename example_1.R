@@ -30,7 +30,7 @@ if (length(args) > 1) {
 
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
-library(beautier)
+#library(beautier)
 
 if (1 == 2) {
   setwd("~/GitHubs/pirouette_example_1")
