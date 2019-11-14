@@ -23,8 +23,8 @@ r_github_packages:
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - thijsjanzen/nodeSub
-  - richelbilderbeek/pirouette
-  - richelbilderbeek/peregrine
+  - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/peregrine@richel
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling
