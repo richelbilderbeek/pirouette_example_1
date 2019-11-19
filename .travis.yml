@@ -66,6 +66,7 @@ script:
   - if [ ! -f example_1_314/true_alignment_gen.log ]; then echo "file 'true_alignment_gen.log' not found" ; exit 1 ; fi
   - if [ ! -f example_1_314/true_alignment_gen.trees ]; then echo "file 'true_alignment_gen.trees' not found" ; exit 1 ; fi
   - if [ ! -f example_1_314/true_alignment_gen.csv ]; then echo "file 'true_alignment_gen.csv' not found" ; exit 1 ; fi
+  - if [ ! -f example_1_314/true_errors_gen.csv ]; then echo "file 'true_errors_gen.csv' not found" ; exit 1 ; fi
   # Derived files: true alignment, generative model
   - if [ ! -f example_1_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
   - if [ ! -f example_1_314/true_alignment.png ]; then echo "file 'true_alignment.png' not found" ; exit 1 ; fi

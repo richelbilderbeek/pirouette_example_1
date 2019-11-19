@@ -39,6 +39,7 @@ experiment$beast2_options$output_state_filename <- "true_alignment_gen.xml.state
 experiment$inference_model$mcmc$tracelog$filename <- "true_alignment_gen.log"
 experiment$inference_model$mcmc$treelog$filename <- "true_alignment_gen.trees"
 experiment$inference_model$mcmc$screenlog$filename <- "true_alignment_gen.csv"
+experiment$errors_filename <- "true_errors_gen.csv"
 experiments <- list(experiment)
 
 # Set the RNG seed
@@ -84,3 +85,4 @@ pir_to_tables(
   pir_params = pir_params,
   folder = example_folder
 )
+
