@@ -5,19 +5,16 @@
 #
 #
 
-# Set the RNG seed
-rng_seed <- 314
-
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
-#library(beautier)
 
-if (1 == 2) {
+if (1 == 1) {
   setwd("~/GitHubs/pirouette_example_1")
 }
 
 root_folder <- getwd()
 example_no <- 1
+rng_seed <- 314
 example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
 dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
 setwd(example_folder)
@@ -43,7 +40,7 @@ for (i in seq_along(experiments)) {
 }
 
 # Testing
-if (1 == 1) {
+if (1 == 2) {
   for (i in seq_along(experiments)) {
     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 20000, store_every = 1000)
   }
