@@ -28,10 +28,16 @@ alignment_params <- create_alignment_params(
     site_model = beautier::create_jc69_site_model()
   ),
   root_sequence = create_blocked_dna(length = 1000),
-  rng_seed = rng_seed
+  rng_seed = rng_seed,
+  fasta_filename = "true_alignment.fas"
 )
 
 experiment <- create_gen_experiment()
+experiment$beast2_options$input_filename <- "true_alignment_gen.xml"
+experiment$beast2_options$output_state_filename <- "true_alignment_gen.xml.state"
+experiment$inference_model$mcmc$tracelog$filename <- "true_alignment_gen.log"
+experiment$inference_model$mcmc$treelog$filename <- "true_alignment_gen.trees"
+experiment$inference_model$mcmc$screenlog$filename <- "true_alignment_gen.csv"
 experiments <- list(experiment)
 
 # Set the RNG seed
