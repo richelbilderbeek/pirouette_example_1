@@ -3,27 +3,27 @@
 #
 #<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
 #    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
-#        <distribution id="YuleModel.t:alignment_1335a967c27" spec="beast.evolution.speciation.YuleModel">
-#            <parameter id="birthRate.t:alignment_1335a967c27" name="birthDiffRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
-#            <tree id="Tree.t:alignment_1335a967c27" spec="beast.evolution.tree.Tree">
-#                <taxonset id="TaxonSet.alignment_1335a967c27" spec="beast.evolution.alignment.TaxonSet">
+#        <distribution id="YuleModel.t:true_alignment" spec="beast.evolution.speciation.YuleModel">
+#            <parameter id="birthRate.t:true_alignment" name="birthDiffRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <tree id="Tree.t:true_alignment" spec="beast.evolution.tree.Tree">
+#                <taxonset id="TaxonSet.true_alignment" spec="beast.evolution.alignment.TaxonSet">
 #                </taxonset>
 #            </tree>
 #        </distribution>
-#        <prior id="YuleBirthRatePrior.t:alignment_1335a967c27" name="distribution" x="@birthRate.t:alignment_1335a967c27">
+#        <prior id="YuleBirthRatePrior.t:true_alignment" name="distribution" x="@birthRate.t:true_alignment">
 #            <Uniform id="Uniform.100" name="distr" upper="Infinity"/>
 #        </prior>
 #    </distribution>
 #    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
-#        <distribution data="@alignment_1335a967c27" id="treeLikelihood.alignment_1335a967c27" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:alignment_1335a967c27">
-#            <siteModel id="SiteModel.s:alignment_1335a967c27" spec="beast.evolution.sitemodel.SiteModel">
-#                <parameter estimate="false" id="mutationRate.s:alignment_1335a967c27" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
-#                <parameter estimate="false" id="gammaShape.s:alignment_1335a967c27" name="shape" spec="beast.core.parameter.RealParameter">1.0</parameter>
-#                <parameter estimate="false" id="proportionInvariant.s:alignment_1335a967c27" lower="0.0" name="proportionInvariant" spec="beast.core.parameter.RealParameter" upper="1.0">0.0</parameter>
-#                <substModel id="JC69.s:alignment_1335a967c27" spec="beast.evolution.substitutionmodel.JukesCantor"/>
+#        <distribution data="@true_alignment" id="treeLikelihood.true_alignment" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:true_alignment">
+#            <siteModel id="SiteModel.s:true_alignment" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:true_alignment" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="gammaShape.s:true_alignment" name="shape" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:true_alignment" lower="0.0" name="proportionInvariant" spec="beast.core.parameter.RealParameter" upper="1.0">0.0</parameter>
+#                <substModel id="JC69.s:true_alignment" spec="beast.evolution.substitutionmodel.JukesCantor"/>
 #            </siteModel>
-#            <branchRateModel id="StrictClock.c:alignment_1335a967c27" spec="beast.evolution.branchratemodel.StrictClockModel">
-#                <parameter estimate="false" id="clockRate.c:alignment_1335a967c27" name="clock.rate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <branchRateModel id="StrictClock.c:true_alignment" spec="beast.evolution.branchratemodel.StrictClockModel">
+#                <parameter estimate="false" id="clockRate.c:true_alignment" name="clock.rate" spec="beast.core.parameter.RealParameter">1.0</parameter>
 #            </branchRateModel>
 #        </distribution>
 #    </distribution>
