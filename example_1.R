@@ -9,9 +9,9 @@ suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
 
 
-if (!is_on_travis()) {
-  setwd("~/GitHubs/pirouette_example_1")
-}
+#if (!is_on_travis()) {
+#  setwd("~/GitHubs/pirouette_example_1")
+#}
 
 root_folder <- getwd()
 example_no <- 1
@@ -48,11 +48,11 @@ for (i in seq_along(experiments)) {
 }
 
 # Testing on local machine
-if (!is_on_travis()) {
-  for (i in seq_along(experiments)) {
-    experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 20000, store_every = 1000)
-  }
-}
+#if (!is_on_travis()) {
+#  for (i in seq_along(experiments)) {
+#    experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 20000, store_every = 1000)
+#  }
+#}
 
 pir_params <- create_pir_params(
   alignment_params = alignment_params,
