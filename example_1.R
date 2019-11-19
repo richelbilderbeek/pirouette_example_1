@@ -8,7 +8,8 @@
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
 
-if (1 == 1) {
+
+if (!is_on_travis()) {
   setwd("~/GitHubs/pirouette_example_1")
 }
 
@@ -45,8 +46,8 @@ for (i in seq_along(experiments)) {
   experiments[[i]]$beast2_options$rng_seed <- rng_seed
 }
 
-# Testing
-if (1 == 2) {
+# Testing on local machine
+if (!is_on_travis()) {
   for (i in seq_along(experiments)) {
     experiments[[i]]$inference_model$mcmc <- create_mcmc(chain_length = 20000, store_every = 1000)
   }
