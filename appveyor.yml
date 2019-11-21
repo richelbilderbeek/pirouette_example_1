@@ -50,19 +50,18 @@ after_test:
   # Check if all files are created
   # Basic files: true alignment
   - if not exist "example_1_314/true_alignment.fas" exit 1
-  #- if [ ! -f example_1_314/true_alignment.fas ]; then echo "file 'true_alignment.fas' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_alignment.png ]; then echo "file 'true_alignment.png' not found" ; exit 1 ; fi
-  ## Basic files: true alignment, generative model
-  #- if [ ! -f example_1_314/true_alignment_gen.xml ]; then echo "file 'true_alignment_gen.xml' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_alignment_gen.xml.state ]; then echo "file 'true_alignment_gen.xml.state' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_alignment_gen.log ]; then echo "file 'true_alignment_gen.log' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_alignment_gen.trees ]; then echo "file 'true_alignment_gen.trees' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_alignment_gen.csv ]; then echo "file 'true_alignment_gen.csv' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_errors_gen.csv ]; then echo "file 'true_errors_gen.csv' not found" ; exit 1 ; fi
-  ## Derived files: true alignment, generative model
-  #- if [ ! -f example_1_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_error_violin_gen.png ]; then echo "file 'true_error_violin_gen.png' not found" ; exit 1 ; fi
-  #- if [ ! -f example_1_314/true_posterior_gen.png ]; then echo "file 'true_posterior_gen.png' not found" ; exit 1 ; fi
+  - if not exist "example_1_314/true_alignment.png" exit 1
+  # Basic files: true alignment, generative model
+  - if not exist "example_1_314/true_alignment_gen.xml" exit 1
+  - if not exist "example_1_314/true_alignment_gen.xml.state" exit 1
+  - if not exist "example_1_314/true_alignment_gen.log" exit 1
+  - if not exist "example_1_314/true_alignment_gen.trees" exit 1
+  - if not exist "example_1_314/true_alignment_gen.csv" exit 1
+  - if not exist "example_1_314/true_errors_gen.csv" exit 1
+  # Derived files: true alignment, generative model
+  - if not exist "example_1_314/esses_gen.latex" exit 1
+  - if not exist "example_1_314/true_error_violin_gen.png" exit 1
+  - if not exist "example_1_314/true_posterior_gen.png" exit 1
 
 on_failure:
   - 7z a failure.zip *.Rcheck\*
