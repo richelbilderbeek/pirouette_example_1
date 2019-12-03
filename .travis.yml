@@ -22,7 +22,6 @@ r_github_packages:
   - richelbilderbeek/pirouette@richel
   - richelbilderbeek/peregrine@richel
   - MangoTheCat/goodpractice
-  - KlausVigo/phangorn
   - ropensci/spelling
 
 bioc_packages:
