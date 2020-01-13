@@ -4,19 +4,12 @@ cache: packages
 
 r_github_packages:
   - Giappo/mbd
-  - jimhester/covr
-  - jimhester/lintr
   - richelbilderbeek/mcbette
   - richelbilderbeek/ribir
   - richelbilderbeek/becosys
   - thijsjanzen/nodeSub
-  - richelbilderbeek/pirouette@richel
-  - richelbilderbeek/peregrine@richel
-  - MangoTheCat/goodpractice
-  - ropensci/spelling
-
-bioc_packages:
-  - ggtree
+  - richelbilderbeek/pirouette
+  - richelbilderbeek/peregrine
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
@@ -29,10 +22,6 @@ before_install:
   # Java
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R CMD javareconf; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
-  # Check dead links
-  - sudo apt-get install -qq npm
-  - npm config set strict-ssl false
-  - sudo npm install -g markdown-link-check
 
 before_script:
   - Rscript -e "beastier::install_beast2()"
@@ -58,9 +47,6 @@ script:
   - if [ ! -f example_1_314/esses_gen.latex ]; then echo "file 'esses_gen.latex' not found" ; exit 1 ; fi
   - if [ ! -f example_1_314/true_error_violin_gen.png ]; then echo "file 'true_error_violin_gen.png' not found" ; exit 1 ; fi
   - if [ ! -f example_1_314/true_posterior_gen.png ]; then echo "file 'true_posterior_gen.png' not found" ; exit 1 ; fi
-  # Check dead links
-  - rm .travis.yml
-  - ./scripts/check_dead_links
 
 after_success:
   - Rscript -e 'peregrine::get_pff_tempfile()'
