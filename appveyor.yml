@@ -40,10 +40,8 @@ test_script:
   - travis-tool.sh run_tests
 
 after_test:
-  # Delete all previous results
-  - rm -rf example_1_314
   # Go!
-  - Rscript example_1.R
+  - ./scripts/rerun.sh
   # Check if all files are created
   # Basic files: true alignment
   - if not exist "example_1_314/true_alignment.fas" exit 1

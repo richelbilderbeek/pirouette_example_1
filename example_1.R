@@ -1,5 +1,6 @@
 suppressMessages(library(pirouette))
 suppressMessages(library(ggplot2))
+suppressMessages(library(pryr))
 
 root_folder <- getwd()
 example_no <- 1
