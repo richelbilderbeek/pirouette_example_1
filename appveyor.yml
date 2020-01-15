@@ -10,8 +10,8 @@ init:
 install:
   ps: Bootstrap
 
-#cache:
-#  - C:\RLibrary
+cache:
+  - C:\RLibrary
 
 # Adapt as necessary starting from here
 
@@ -41,7 +41,7 @@ test_script:
 
 after_test:
   # Go!
-  - ./scripts/rerun.sh
+  - bash scripts/rerun.sh
   # Check if all files are created
   # Basic files: true alignment
   - if not exist "example_1_314/true_alignment.fas" exit 1
