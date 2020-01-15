@@ -24,6 +24,7 @@ environment:
 build_script:
   - travis-tool.sh install_r curl
   - travis-tool.sh install_r babette
+  - travis-tool.sh install_r mvtnorm
   - travis-tool.sh install_github Giappo/mbd
   - travis-tool.sh install_github jimhester/covr
   - travis-tool.sh install_github jimhester/lintr
