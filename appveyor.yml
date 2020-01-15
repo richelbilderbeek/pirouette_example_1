@@ -18,7 +18,7 @@ cache:
 # Inspired on https://github.com/juliasilge/tidytext
 environment:
   global:
-    WARNINGS_ARE_ERRORS: 1
+    WARNINGS_ARE_ERRORS: 0
     USE_RTOOLS: true
 
 build_script:
@@ -33,7 +33,7 @@ build_script:
   - travis-tool.sh install_github richelbilderbeek/becosys
   - travis-tool.sh install_github thijsjanzen/nodeSub
   - travis-tool.sh install_github richelbilderbeek/pirouette
-  - # travis-tool.sh install_deps
+  - travis-tool.sh install_deps
   - Rscript -e "beastier::install_beast2()"
 
 test_script:
