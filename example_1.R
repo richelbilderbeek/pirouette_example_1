@@ -4,7 +4,6 @@
 #
 #
 suppressMessages(library(pirouette))
-suppressMessages(library(ggplot2))
 suppressMessages(library(pryr))
 testit::assert(is_beast2_installed())
 
@@ -43,6 +42,9 @@ pir_out <- pir_run(
   pir_params = pir_params
 )
 
+################################################################################
+# Save results
+################################################################################
 pir_save(
   phylogeny = phylogeny,
   pir_params = pir_params,
