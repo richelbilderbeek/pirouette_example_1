@@ -6,7 +6,6 @@ r_github_packages:
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
-  - richelbilderbeek/peregrine
 
 before_install:
   # From https://stackoverflow.com/a/20042195
