@@ -3,6 +3,7 @@ dist: bionic
 cache: packages
 
 r_github_packages:
+  - richelbilderbeek/tiebeaur
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette
